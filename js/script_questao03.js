@@ -16,6 +16,6 @@ formDados.addEventListener('submit', (evt) => {
 
 
 
-    divResultado.innerHTML = `O combustivel necessario será ${distancia.toFixed(2).replace('.', ',')} o preço total para essa locomoção  ${consumo.toFixed(2).replace('.', ',')}`
+    divResultado.innerHTML = `O combustivel necessário será ${distancia.toFixed(2).replace('.', ',')}, o preço total para essa locomoção será ${consumo.toFixed(2).replace('.', ',')}`
 
 })

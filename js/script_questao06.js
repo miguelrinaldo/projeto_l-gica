@@ -7,7 +7,7 @@ formDados.addEventListener('submit', (evt) => {
 
     const form_num = new FormData(formDados)
 
-    let Nome = parseFloat(form_num.get('Nome'))
+    let Nome = (form_num.get('Nome'))
     let num2 = parseFloat(form_num.get('num2'))
     let num3 = parseFloat(form_num.get('num3'))
     let num4 =parseFloat(form_num.get('num4'))
@@ -22,7 +22,8 @@ formDados.addEventListener('submit', (evt) => {
         alert(`${Nome} foi Reprovado(a)`)
     }
 
- divResultado.innerHTML = media = `A soma de ${Nome} foi ${media.toFixed(2).replace('.', '.')} ${Nome} foi ${media >= 6 ? (Aprovado(a)) : (Reprovado(a))}` 
+
+ divResultado.innerHTML = media = `A soma de ${Nome} foi ${media.toFixed(2).replace('.', '.')}. ${Nome} foi ${media >= 6 ? (Aprovado(a)) : (Reprovado(a))}` 
 })  
 
 
