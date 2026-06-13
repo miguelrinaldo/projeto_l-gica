@@ -8,22 +8,24 @@ formDados.addEventListener('submit', (evt) => {
     const form_num = new FormData(formDados)
 
     let Nome = (form_num.get('Nome'))
+    let num1 = parseFloat(form_num.get('num1'))
     let num2 = parseFloat(form_num.get('num2'))
-    let num3 = parseFloat(form_num.get('num3'))
-    let num4 =parseFloat(form_num.get('num4'))
 
     console.log(Nome, num2, num3, num4)
 
-    let media = parseFloat(num2 + num3 + num4) / parseFloat(3)
+    let imc = parseFloat(num1) / parseFloat(num2 * num2)
  
-    if (media >= 6){
-        alert(`${Nome} foi Aprovado(a)`)
-    }else{
-        alert(`${Nome} foi Reprovado(a)`)
-    }
+    if (imc < 20){
+        divResultado.innertHTML = ˋ${nome}, o IMC é ${imc.toFixed(2) o individuo abaixo do peso.ˋ
+   }else if((imc >= 20) && (imc < 25)) {
+        divResultado.innertHTML = ˋ${nome}, o IMC é ${imc.toFixed(2) o individuo está com o peso normal.ˋ
+   }else if((imc >= 25) && (imc < 30)) {
+        divResultado.innertHTML = ˋ${nome}, o IMC é ${imc.toFixed(2) o individuo está acima do peso.ˋ
+    else if((imc >= 30) && (imc < 35)) {
+        divResultado.innertHTML = ˋ${nome}, o IMC é ${imc.toFixed(2) o individuo está com obesidade grau 1.ˋ
+    else ((imc >= 35) && (imc < 40)) {
+        divResultado.innertHTML = ˋ${nome}, o IMC é ${imc.toFixed(2) o individuo está com obesidade grau 2.ˋ
 
-
- divResultado.innerHTML = media = `A soma de ${Nome} foi ${media.toFixed(2).replace('.', '.')}. ${Nome} foi ${media >= 6 ? (Aprovado(a)) : (Reprovado(a))}` 
 })  
 
 
